@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="UraniumControlIssue.MainPage">
+
+    <Grid RowDefinitions="Auto, Auto, Auto"
+          RowSpacing="10"
+          VerticalOptions="CenterAndExpand">
+
+        <material:TextField Grid.Row="0"
+                            Title="Username"
+                            Icon="{FontImageSource FontFamily=MaterialRegular,
+                                                   Glyph={x:Static m:MaterialRegular.Email}}"
+                            HorizontalOptions="{OnIdiom Desktop=CenterAndExpand,
+                                                        Default=FillAndExpand}"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="{OnIdiom Desktop=450,
+                                                   Default=-1}"
+                            BorderThickness="2"
+                            AllowClear="True"
+                            Keyboard="Text" />
+
+        <material:TextField Grid.Row="1"
+                            Title="Password"
+                            Icon="{FontImageSource FontFamily=MaterialRegular,
+                                                   Glyph={x:Static m:MaterialRegular.Password}}"
+                            HorizontalOptions="{OnIdiom Desktop=CenterAndExpand,
+                                                        Default=FillAndExpand}"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="{OnIdiom Desktop=450,
+                                                   Default=-1}"
+                            BorderThickness="2"
+                            IsPassword="True"
+                            Keyboard="Text">
+            <material:TextField.Attachments>
+                <material:TextFieldPasswordShowHideAttachment />
+            </material:TextField.Attachments>
+        </material:TextField>
+
+        <Button Grid.Row="2"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Text="Login"
+                WidthRequest="70" />
+    </Grid>
+</ContentPage>
