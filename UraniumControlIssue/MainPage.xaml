@@ -5,44 +5,50 @@
              xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              x:Class="UraniumControlIssue.MainPage">
 
-    <Grid RowDefinitions="Auto, Auto, Auto"
-          RowSpacing="10"
-          VerticalOptions="CenterAndExpand">
+    <VerticalStackLayout Spacing="10" WidthRequest="{OnIdiom Default=-1,Desktop=400}" Padding="20" VerticalOptions="Center">
+        <material:TextField Title="Username"
+                      Icon="{FontImageSource FontFamily=MaterialRegular,
+                                             Glyph={x:Static m:MaterialRegular.Email}}"
+                      AllowClear="True"
+                      Keyboard="Text"/>
 
-        <material:TextField Grid.Row="0"
-                            Title="Username"
-                            Icon="{FontImageSource FontFamily=MaterialRegular,
-                                                   Glyph={x:Static m:MaterialRegular.Email}}"
-                            HorizontalOptions="{OnIdiom Desktop=CenterAndExpand,
-                                                        Default=FillAndExpand}"
-                            VerticalOptions="CenterAndExpand"
-                            WidthRequest="{OnIdiom Desktop=450,
-                                                   Default=-1}"
-                            BorderThickness="2"
-                            AllowClear="True"
-                            Keyboard="Text" />
+        <material:TextField Title="Username"
+                      Icon="{FontImageSource FontFamily=MaterialRegular,
+                                             Glyph={x:Static m:MaterialRegular.Password}}"
+                      AllowClear="True"
+                      Keyboard="Text">
 
-        <material:TextField Grid.Row="1"
-                            Title="Password"
-                            Icon="{FontImageSource FontFamily=MaterialRegular,
-                                                   Glyph={x:Static m:MaterialRegular.Password}}"
-                            HorizontalOptions="{OnIdiom Desktop=CenterAndExpand,
-                                                        Default=FillAndExpand}"
-                            VerticalOptions="CenterAndExpand"
-                            WidthRequest="{OnIdiom Desktop=450,
-                                                   Default=-1}"
-                            BorderThickness="2"
-                            IsPassword="True"
-                            Keyboard="Text">
             <material:TextField.Attachments>
                 <material:TextFieldPasswordShowHideAttachment />
             </material:TextField.Attachments>
         </material:TextField>
 
-        <Button Grid.Row="2"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="CenterAndExpand"
-                Text="Login"
-                WidthRequest="70" />
-    </Grid>
+        <Button Text="Login"
+          WidthRequest="70" />
+
+    </VerticalStackLayout>
+
+    <!--IF YOU STILL CONTINUE WITH THE GRID, YOU CAN USE THIS CODE BELOW 👇 -->
+
+    <!--<Grid RowDefinitions="Auto,Auto,Auto" WidthRequest="{OnIdiom Default=-1, Desktop=400}" Padding="20" RowSpacing="10" VerticalOptions="Center">
+     <material:TextField Title="Username" Grid.Row="0"
+                         Icon="{FontImageSource FontFamily=MaterialRegular,
+                                                Glyph={x:Static m:MaterialRegular.Email}}"
+                         AllowClear="True"
+                         Keyboard="Text"/>
+
+     <material:TextField Title="Username" Grid.Row="1"
+                         Icon="{FontImageSource FontFamily=MaterialRegular,
+                                                Glyph={x:Static m:MaterialRegular.Password}}"
+                         AllowClear="True"
+                         Keyboard="Text">
+
+         <material:TextField.Attachments>
+             <material:TextFieldPasswordShowHideAttachment />
+         </material:TextField.Attachments>
+     </material:TextField>
+
+     <Button Text="Login" Grid.Row="2"
+             WidthRequest="70" />
+ </Grid>-->
 </ContentPage>
