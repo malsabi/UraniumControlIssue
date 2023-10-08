@@ -5,7 +5,7 @@
              xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
              x:Class="UraniumControlIssue.MainPage">
 
-    <VerticalStackLayout Spacing="10" WidthRequest="{OnIdiom Default=-1,Desktop=400}" Padding="20">
+    <VerticalStackLayout Spacing="10" WidthRequest="{OnIdiom Default=-1,Desktop=400}" Padding="20" VerticalOptions="Center">
         <material:TextField Title="Username"
                       Icon="{FontImageSource FontFamily=MaterialRegular,
                                              Glyph={x:Static m:MaterialRegular.Email}}"
@@ -30,7 +30,7 @@
 
     <!--IF YOU STILL CONTINUE WITH THE GRID, YOU CAN USE THIS CODE BELOW 👇 -->
 
-    <!--<Grid RowDefinitions="Auto,Auto,Auto" WidthRequest="{OnIdiom Default=-1, Desktop=400}" Padding="20" RowSpacing="10">
+    <!--<Grid RowDefinitions="Auto,Auto,Auto" WidthRequest="{OnIdiom Default=-1, Desktop=400}" Padding="20" RowSpacing="10" VerticalOptions="Center">
      <material:TextField Title="Username" Grid.Row="0"
                          Icon="{FontImageSource FontFamily=MaterialRegular,
                                                 Glyph={x:Static m:MaterialRegular.Email}}"
